@@ -1,0 +1,37 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="container full-width-container">
+  <div class="content">
+    <input type="text"
+           class="goods-search"
+           placeholder="Знайдено {{filteredGoods.length}} товарів"
+           ng-model="searchText"
+           ng-change="findGoods(searchText)">
+    <h4 ng-if="filteredGoods.length === 0 && allGoods.length === 0"
+        class="goods-msg">Зачекайте поки триває пошук...<br>
+      <img src="../assets/loader.gif"
+           alt="loader">
+    </h4>
+    <h4 ng-if="filteredGoods.length === 0 && allGoods.length > 0"
+        class="goods-msg">Товар не знайдено</h4>
+    <ul ng-if="filteredGoods.length !== 0"
+        class="goods">
+      <li
+        ng-repeat="g in filteredGoods | orderBy:'title' | pagination: currentPage * itemsPerPage | limitTo:itemsPerPage">
+        {{g.title}}
+        <div style="background-image: url({{g.img}});"></div>
+        <img ng-src="../assets/images/{{g.store}}.png"
+             alt="{{g.store}}"><strong>{{g.price | currency:"&#8372;"}}</strong>
+        <a class="button"
+           ng-href="{{g.link}}"
+           target="_blank">Детальніше</a>
+      </li>
+    </ul>
+    <ul class="goods-paging">
+      <li ng-repeat="p in pages"
+          ng-click="setCurrentPage(p)"
+          ng-class="{current:currentPage===p}">{{p+1}}
+      </li>
+    </ul>
+  </div>
+</div>
+<div ng-include="'components/footer/footer.html'"></div>

@@ -1,0 +1,42 @@
+@import '//fonts.googleapis.com/css?family=Raleway:400,300,600';
+@import '//fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic';
+@import '../bower_components/skeleton/css/normalize.css';
+@import '../bower_components/skeleton/css/skeleton.css';
+/*@import '../bower_components/font-awesome/less/font-awesome.less';
+@fa-font-path: '/bower_components/font-awesome/fonts';*/
+* {
+  font-family: "Raleway", "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+/**
+ * App-wide Styles
+ */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/**
+* Shared
+*/
+.button {
+  border-radius: 100px;
+}
+.section {
+  padding: 8rem 0 7rem;
+  text-align: center;
+}
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+/*@import 'goods/goods.less';
+@import 'main/main.less';
+@import 'footer/footer.less';
+@import 'navbar/navbar.less';*/
