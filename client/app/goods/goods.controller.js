@@ -57,7 +57,12 @@ angular.module('cheapTodayApp')
       $scope.filteredGoods = $filter('filter')($scope.allGoods, txt, false);
       $scope.setCurrentPage(0);
       $scope.setPages();
+    };
 
+    $scope.filterGoodsByPrice = function(min, max){
+      $scope.filteredGoods = $filter('goodsByPrice')($scope.allGoods, {min: min, max: max}, false);
+      $scope.setCurrentPage(0);
+      $scope.setPages();
     };
 
     loadGoods();
