@@ -56,15 +56,18 @@
       <script src="bower_components/angular-resource/angular-resource.js"></script>
       <script src="bower_components/angular-cookies/angular-cookies.js"></script>
       <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-      <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+      <script src="bower_components/lodash/lodash.js"></script>
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/async/lib/async.js"></script>
       <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,client}) app/app.js -->
         <script src="app/app.js"></script>
           <!-- injector:js -->
+          <script src="app/goods/filters/goodsByCategory.filter.js"></script>
           <script src="app/goods/filters/goodsByPrice.filter.js"></script>
+          <script src="app/goods/filters/goodsByShop.filter.js"></script>
           <script src="app/goods/goods.controller.js"></script>
           <script src="app/goods/goods.js"></script>
           <script src="app/goods/goods.service.js"></script>

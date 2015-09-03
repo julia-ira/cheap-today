@@ -1,6 +1,5 @@
 {
   "name": "es5-shim",
-  "version": "3.0.2",
   "main": "es5-shim.js",
   "repository": {
     "type": "git",
@@ -19,8 +18,7 @@
   "keywords": [
     "shim",
     "es5",
-    "es5",
-    "shim",
+    "es5 shim",
     "javascript",
     "ecmascript",
     "polyfill"
@@ -32,13 +30,15 @@
     "bower_components",
     "tests"
   ],
-  "_release": "3.0.2",
+  "version": "4.1.11",
+  "_release": "4.1.11",
   "_resolution": {
     "type": "version",
-    "tag": "v3.0.2",
-    "commit": "e77568917008c0e69301582345b541b848a25e8c"
+    "tag": "v4.1.11",
+    "commit": "19e6445a3f411ad56e64ce9d21996098cee2e985"
   },
   "_source": "git://github.com/es-shims/es5-shim.git",
-  "_target": "~3.0.1",
-  "_originalSource": "es5-shim"
+  "_target": "~4.1.11",
+  "_originalSource": "es5-shim",
+  "_direct": true
 }

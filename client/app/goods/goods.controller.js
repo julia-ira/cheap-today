@@ -53,19 +53,33 @@ angular.module('cheapTodayApp')
       $scope.currentPage = p;
     };
 
-    $scope.findGoods = function (txt) {
-      $scope.filteredGoods = $filter('filter')($scope.allGoods, txt, false);
+    $scope.resetPagination = function () {
       $scope.setCurrentPage(0);
       $scope.setPages();
     };
 
-    $scope.filterGoodsByPrice = function(min, max){
+    $scope.findGoods = function (txt) {
+      $scope.filteredGoods = $filter('filter')($scope.allGoods, txt, false);
+      $scope.resetPagination();
+    };
+
+    $scope.filterGoodsByPrice = function (min, max) {
       $scope.filteredGoods = $filter('goodsByPrice')($scope.allGoods, {min: min, max: max}, false);
-      $scope.setCurrentPage(0);
-      $scope.setPages();
+      $scope.resetPagination();
+    };
+
+    $scope.filterGoodsByStore = function (store) {
+      $scope.filteredGoods = $filter('goodsByShop')($scope.allGoods, store, false);
+      $scope.resetPagination();
+    };
+
+    $scope.filterGoodsByCategory = function (categoryId) {
+      $scope.filteredGoods = $filter('goodsByCategory')($scope.allGoods, categoryId, false);
+      $scope.resetPagination();
     };
 
     loadGoods();
+    $scope.filterGoodsByCategory(1);
 
   });
 
