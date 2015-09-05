@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('cheapTodayApp')
-  .controller('GoodsCtrl', function ($scope, $filter, goods) {
+  .controller('GoodsCtrl', function ($scope, $filter, $http, goods) {
 
     $scope.filteredGoods = [];
     $scope.allGoods = [];
@@ -74,12 +74,16 @@ angular.module('cheapTodayApp')
     };
 
     $scope.filterGoodsByCategory = function (categoryId) {
-      $scope.filteredGoods = $filter('goodsByCategory')($scope.allGoods, categoryId, false);
-      $scope.resetPagination();
+      $http.get('/resources/categories.json').then(function (categories) {
+        $scope.filteredGoods = $filter('goodsByCategory')($scope.allGoods, {
+          categoryId: categoryId,
+          categories: categories.data
+        }, false);
+        $scope.resetPagination();
+      });
     };
 
     loadGoods();
-    $scope.filterGoodsByCategory(1);
 
   });
 
