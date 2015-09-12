@@ -4,22 +4,21 @@
   clear: both;
   margin: 0 auto;
 }
-.goods-search {
+.full-width-container .goods-search {
   display: block;
   width: 30%;
   min-width: 230px;
   line-height: 2;
   margin: 0 auto 3%;
-  border-radius: 100px !important;
 }
-.goods-msg {
+.full-width-container .goods-msg {
   text-align: center;
   clear: both;
   padding-top: 5%;
   line-height: 2;
   margin-bottom: 70px;
 }
-ul.goods {
+.full-width-container ul.goods {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -28,39 +27,39 @@ ul.goods {
   clear: both;
   margin-bottom: 70px;
 }
-ul.goods li {
+.full-width-container ul.goods li {
   width: 230px;
   overflow: hidden;
   text-align: center;
 }
-ul.goods li div {
+.full-width-container ul.goods li div {
   width: inherit;
   height: 200px;
   background-repeat: no-repeat;
   background-size: contain;
 }
-ul.goods li strong {
+.full-width-container ul.goods li strong {
   font-size: 1.5em;
 }
-ul.goods li img {
+.full-width-container ul.goods li img {
   max-width: 100px;
   margin-right: 10px;
 }
-ul.goods li a {
+.full-width-container ul.goods li a {
   display: block;
 }
-ul.goods-paging {
+.full-width-container ul.goods-paging {
   list-style: none;
   text-align: center;
 }
-ul.goods-paging li {
+.full-width-container ul.goods-paging li {
   display: inline;
   padding: 0 5px;
 }
-ul.goods-paging li:hover {
+.full-width-container ul.goods-paging li:hover {
   cursor: pointer;
 }
-.current {
+.full-width-container ul.goods-paging li.current {
   font-weight: bold;
 }
 ul.filtering-nav {

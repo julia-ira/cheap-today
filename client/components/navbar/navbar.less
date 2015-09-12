@@ -1,31 +1,32 @@
-.navbar {
-  padding: 30px 0 23px;
+nav.navbar {
+  margin-top: 1%;
 
-  .navbar-brand img {
-    display: block;
+  .logo {
+    display: inline-block;
+
+    &, img {
+      height: 50px;
+      vertical-align: bottom;
+    }
   }
 
-  /*.navbar-list {
-    float: right;
+  ul {
     list-style: none;
-    margin-bottom: 0;
+    margin-top: 5px;
 
-    .navbar-link {
-      display: inline;
-      margin-left: 35px;
+    li {
+      text-align: right;
 
       a {
         text-transform: uppercase;
-        font-weight: 600;
-        letter-spacing: .1rem;
         text-decoration: none;
-        color: #222;
+        letter-spacing: 2px;
+        color: #000;
+      }
+
+      &.active a {
+        font-weight: bold;
       }
     }
-
-    .navbar-link a:hover, .navbar-link.active a {
-      color: #33C3F0;
-    }
-  }*/
+  }
 }
-

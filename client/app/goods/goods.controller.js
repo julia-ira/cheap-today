@@ -75,6 +75,7 @@ angular.module('cheapTodayApp')
 
     $scope.setCurrentPage = function (p) {
       $scope.currentPage = p;
+      window.scrollTo(0,0);
     };
 
     $scope.resetPagination = function () {
