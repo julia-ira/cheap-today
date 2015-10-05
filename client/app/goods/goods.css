@@ -63,3 +63,54 @@ ul.goods-paging li:hover {
 .current {
   font-weight: bold;
 }
+ul.filtering-nav {
+    text-align: center;
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid white;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid white;
+    color: #555;
+    width: 400px;
+    margin: 20px auto;
+    min-height: 26px;
+}
+ul.filtering-nav li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 15px;
+  width: 82px;
+  padding: 2px 0;
+}
+ul.filtering-nav li.active{
+  background-color: white;
+  border-radius: 10px;
+  padding: 0;
+  border-top: 1px solid white;
+  border-bottom: 1px solid lightgrey;
+  color: black;
+  border-left: 1px solid white;
+  border-right: 1px solid lightgrey;
+  display: inline-block;
+  width: 80px;
+}
+div.filtering-items span{
+    border-radius: 10px;
+    padding: 2px 15px;
+    border: 1px solid #888;
+    color: #333;
+}
+div.filtering-items span.filtering-close{
+    border: none;
+    margin-right: -5px;
+    padding: 0 0 0 10px;
+}
+div.filtering-expand{
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+div.filtering-expand select{
+  width: 300px;
+}

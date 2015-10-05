@@ -5,8 +5,25 @@ angular.module('cheapTodayApp')
 
     $scope.filteredGoods = [];
     $scope.allGoods = [];
+    $scope.categories = [];
     $scope.currentPage = 0;
     $scope.itemsPerPage = 20;
+    $scope.stores = [{name:"Comfy",id:"comfy"},{name:"Ельдорадо",id:"eldorado"},{name:"КТС",id:"ktc"},{name:"Фокстрот",id:"foxtrot"},{name:"Алло",id:"allo"},{name:"Метро",id:"metro"}];
+
+    $(function() {
+       $(".filtering-nav li").click(function() {
+          $(".filtering-nav li").not(this).removeClass("active");
+          $(this).toggleClass("active");
+          var navitem = "#filtering-expand-" + $(this).attr("data-expand");
+          $(".filtering-expand").not(navitem).slideUp("normal");
+          $(navitem).slideToggle("normal");
+       });
+       $("#filterPrice").ionRangeSlider({
+          onChange: function (data){
+            $scope.filterGoodsByPrice(data.from,data.to);
+          }
+       });
+    });
 
     function formArrayFrom1toN(N) {
       var i, arr = [];
@@ -43,7 +60,14 @@ angular.module('cheapTodayApp')
       $scope.filteredGoods = val;
       $scope.allGoods = val;
       $scope.setPages();
+      $scope.categories();
     }
+
+    $scope.categories = function() {
+      $http.get('/resources/categories.json').then(function (categories) {
+        $scope.categories = categories.data;
+      });
+    };
 
     $scope.setPages = function () {
       $scope.pages = formArrayFrom1toN(Math.ceil($scope.filteredGoods.length / $scope.itemsPerPage));
@@ -64,23 +88,25 @@ angular.module('cheapTodayApp')
     };
 
     $scope.filterGoodsByPrice = function (min, max) {
+      console.log(min);
+      console.log(max);
       $scope.filteredGoods = $filter('goodsByPrice')($scope.allGoods, {min: min, max: max}, false);
       $scope.resetPagination();
     };
 
     $scope.filterGoodsByStore = function (store) {
+      console.log($scope.filteredGoods);
+      console.log($scope.allGoods);
       $scope.filteredGoods = $filter('goodsByShop')($scope.allGoods, store, false);
       $scope.resetPagination();
     };
 
     $scope.filterGoodsByCategory = function (categoryId) {
-      $http.get('/resources/categories.json').then(function (categories) {
         $scope.filteredGoods = $filter('goodsByCategory')($scope.allGoods, {
           categoryId: categoryId,
-          categories: categories.data
+          categories: $scope.categories
         }, false);
         $scope.resetPagination();
-      });
     };
 
     loadGoods();

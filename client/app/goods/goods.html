@@ -6,6 +6,40 @@
            placeholder="Знайдено {{filteredGoods.length}} товарів"
            ng-model="searchText"
            ng-change="findGoods(searchText)">
+    <div class="filtering">
+      <div class="filtering-items">
+        <span>Категорії:мобільні телефони,смартфони<span class="filtering-close">&#10005</span></span>
+        <span>Ціна:1500-2000<span class="filtering-close">&#10005</span></span>
+      </div>
+      <ul class="filtering-nav">
+        <li data-expand="category">Категорії</li>
+        <li data-expand="price">Ціна</li>
+        <li data-expand="store">Магазин</li>
+      </ul>
+      <div id="filtering-expand-category" class="filtering-expand">
+          <select ng-model="filterCategory" 
+                  ng-change="filterGoodsByCategory(filterCategory.id)" 
+                  ng-options="filterCategory as filterCategory.categoryName for filterCategory in categories">
+          </select>
+      </div>
+      <div id="filtering-expand-store" class="filtering-expand">
+          <select ng-model="filterStore" 
+                  ng-change="filterGoodsByStore(filterStore.id)" 
+                  ng-options="filterStore as filterStore.name for filterStore in stores">
+          </select>
+      </div>
+      <div id="filtering-expand-price" class="filtering-expand">
+        <input type="text" 
+               ng-model="filterPrice"
+               data-min="0" 
+               data-max="10000"
+               data-type="double"
+               data-prefix="&#8372;"
+               data-grid="true"
+               data-grid-num="10"
+               id="filterPrice"/>
+      </div>
+    </div>
     <h4 ng-if="filteredGoods.length === 0 && allGoods.length === 0"
         class="goods-msg">Зачекайте поки триває пошук...<br>
       <img src="../assets/loader.gif"
