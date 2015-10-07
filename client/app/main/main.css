@@ -1,20 +1,3 @@
-.ct-main-section {
-  background: transparent url('../../assets/cover.jpg') no-repeat;
-  background-size: cover;
-  height: 100vh;
-  text-align: center;
-  color: #FFF;
-}
-.ct-main-section .container {
-  margin: 0 auto;
-  top: 30%;
-}
-.ct-main-section .container .section-heading {
-  font-weight: bold;
-}
-.ct-main-section .container .section-description {
-  font-size: 1.2em;
-}
-.ct-main-section .container .button {
-  margin-top: 4%;
+.main-page-heading {
+  padding-top: 20%;
 }

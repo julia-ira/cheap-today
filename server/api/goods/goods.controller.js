@@ -155,7 +155,7 @@ exports.index = function (req, res) {
     ktcParser,
     foxtrotParser,
     alloParser,
-    metroParser
+    //metroParser
   ], function (err, results) {
     res.json([].concat.apply([], results));
   });

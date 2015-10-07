@@ -3,75 +3,70 @@
   max-width: 100%;
   clear: both;
   margin: 0 auto;
+}
 
-  .goods-search {
-    display: block;
-    width: 30%;
-    min-width: 230px;
-    line-height: 2;
-    margin: 0 auto 3%;
-  }
+.goods-search {
+  display: block;
+  width: 30%;
+  min-width: 230px;
+  line-height: 2;
+  margin: 0 auto 3%;
+  border-radius: 100px !important;
+}
 
-  .goods-msg {
+.goods-msg {
+  text-align: center;
+  clear: both;
+  padding-top: 5%;
+  line-height: 2;
+  margin-bottom: 70px;
+}
+
+ul.goods {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+  list-style: none;
+  clear: both;
+  margin-bottom: 70px;
+
+  li {
+    width: 230px;
+    overflow: hidden;
     text-align: center;
-    clear: both;
-    padding-top: 5%;
-    line-height: 2;
-    margin-bottom: 70px;
-  }
-
-  ul.goods {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: flex-end;
-    list-style: none;
-    clear: both;
-    margin-bottom: 70px;
-
-    li {
-      width: 230px;
-      overflow: hidden;
-      text-align: center;
-
-      div {
-        width: inherit;
-        height: 200px;
-        background-repeat: no-repeat;
-        background-size: contain;
-      }
-
-      strong {
-        font-size: 1.5em;
-      }
-
-      img {
-        max-width: 100px;
-        margin-right: 10px;
-      }
-
-      a {
-        display: block;
-      }
+    div {
+      width: inherit;
+      height: 200px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    strong {
+      font-size: 1.5em;
+    }
+    img {
+      max-width: 100px;
+      margin-right: 10px;
+    }
+    a {
+      display: block;
     }
   }
+}
 
-  ul.goods-paging {
-    list-style: none;
-    text-align: center;
+ul.goods-paging {
+  list-style: none;
+  text-align: center;
 
-    li {
-      display: inline;
-      padding: 0 5px;
-
-      &:hover {
-        cursor: pointer;
-      }
-
-      &.current {
-        font-weight: bold;
-
-      }
-    }
+  li {
+    display: inline;
+    padding: 0 5px;
   }
+  li:hover {
+    cursor: pointer;
+  }
+}
+
+.current {
+  font-weight: bold;
 }

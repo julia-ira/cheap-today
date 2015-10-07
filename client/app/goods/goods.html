@@ -2,7 +2,7 @@
 <div class="container full-width-container">
   <div class="content">
     <input type="text"
-           class="input-rounded goods-search"
+           class="goods-search"
            placeholder="Знайдено {{filteredGoods.length}} товарів"
            ng-model="searchText"
            ng-change="findGoods(searchText)">
@@ -46,7 +46,7 @@
            alt="loader">
     </h4>
     <h4 ng-if="filteredGoods.length === 0 && allGoods.length > 0"
-        class="goods-msg">Нічого не знайдено ;(</h4>
+        class="goods-msg">Товар не знайдено</h4>
     <ul ng-if="filteredGoods.length !== 0"
         class="goods">
       <li
@@ -55,7 +55,7 @@
         <div style="background-image: url({{g.img}});"></div>
         <img ng-src="../assets/images/{{g.store}}.png"
              alt="{{g.store}}"><strong>{{g.price | currency:"&#8372;"}}</strong>
-        <a class="button button-rounded"
+        <a class="button"
            ng-href="{{g.link}}"
            target="_blank">Детальніше</a>
       </li>

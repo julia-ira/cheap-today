@@ -1,27 +1,28 @@
-nav.navbar {
-  margin-top: 1%;
+.navbar {
+  padding: 30px 0 23px;
+  /*.navbar-list {
+    float: right;
+    list-style: none;
+    margin-bottom: 0;
+
+    .navbar-link {
+      display: inline;
+      margin-left: 35px;
+
+      a {
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        text-decoration: none;
+        color: #222;
+      }
+    }
+
+    .navbar-link a:hover, .navbar-link.active a {
+      color: #33C3F0;
+    }
+  }*/
 }
-nav.navbar .logo {
-  display: inline-block;
-}
-nav.navbar .logo,
-nav.navbar .logo img {
-  height: 50px;
-  vertical-align: bottom;
-}
-nav.navbar ul {
-  list-style: none;
-  margin-top: 5px;
-}
-nav.navbar ul li {
-  text-align: right;
-}
-nav.navbar ul li a {
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 2px;
-  color: #000;
-}
-nav.navbar ul li.active a {
-  font-weight: bold;
+.navbar .navbar-brand img {
+  display: block;
 }

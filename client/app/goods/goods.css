@@ -4,21 +4,22 @@
   clear: both;
   margin: 0 auto;
 }
-.full-width-container .goods-search {
+.goods-search {
   display: block;
   width: 30%;
   min-width: 230px;
   line-height: 2;
   margin: 0 auto 3%;
+  border-radius: 100px !important;
 }
-.full-width-container .goods-msg {
+.goods-msg {
   text-align: center;
   clear: both;
   padding-top: 5%;
   line-height: 2;
   margin-bottom: 70px;
 }
-.full-width-container ul.goods {
+ul.goods {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -27,39 +28,39 @@
   clear: both;
   margin-bottom: 70px;
 }
-.full-width-container ul.goods li {
+ul.goods li {
   width: 230px;
   overflow: hidden;
   text-align: center;
 }
-.full-width-container ul.goods li div {
+ul.goods li div {
   width: inherit;
   height: 200px;
   background-repeat: no-repeat;
   background-size: contain;
 }
-.full-width-container ul.goods li strong {
+ul.goods li strong {
   font-size: 1.5em;
 }
-.full-width-container ul.goods li img {
+ul.goods li img {
   max-width: 100px;
   margin-right: 10px;
 }
-.full-width-container ul.goods li a {
+ul.goods li a {
   display: block;
 }
-.full-width-container ul.goods-paging {
+ul.goods-paging {
   list-style: none;
   text-align: center;
 }
-.full-width-container ul.goods-paging li {
+ul.goods-paging li {
   display: inline;
   padding: 0 5px;
 }
-.full-width-container ul.goods-paging li:hover {
+ul.goods-paging li:hover {
   cursor: pointer;
 }
-.full-width-container ul.goods-paging li.current {
+.current {
   font-weight: bold;
 }
 ul.filtering-nav {
